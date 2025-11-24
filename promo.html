@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Bridal Makeup Giveaway | Kuti Dazzles Beauty Parlor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-pink: #f8d7e6;
+            --deep-pink: #290020;
+            --warm-nude: #e8c8b8;
+            --gold: #d4af37;
+            --dark-brown: #3a2e26;
+            --white: #ffffff;
+            --light-gray: #f9f9f9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark-brown);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: var(--white);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--deep-pink);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--deep-pink);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--gold);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-brown);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--deep-pink);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--deep-pink);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assist/img/wedd/wedd\ \(6\).jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--white);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: fadeInDown 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--deep-pink);
+            color: var(--white);
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            animation: fadeIn 1.5s ease;
+            border: 2px solid var(--deep-pink);
+            margin: 10px;
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cta-button.secondary {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .cta-button.secondary:hover {
+            background-color: var(--white);
+            color: var(--deep-pink);
+        }
+        
+        /* Section Styling */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: var(--gold);
+            bottom: -10px;
+            left: 25%;
+        }
+        
+        .section-bg-light {
+            background-color: var(--light-gray);
+        }
+        
+        .section-bg-pink {
+            background-color: var(--primary-pink);
+        }
+        
+        /* About Section */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        
+        /* Eligibility & Selection */
+        .eligibility-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .eligibility-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .eligibility-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .eligibility-card h3 {
+            margin-bottom: 20px;
+            color: var(--deep-pink);
+            display: flex;
+            align-items: center;
+        }
+        
+        .eligibility-card h3 i {
+            margin-right: 10px;
+            color: var(--gold);
+        }
+        
+        .eligibility-list {
+            list-style: none;
+        }
+        
+        .eligibility-list li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .eligibility-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+        
+        /* Offer Details */
+        .offer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .offer-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        
+        .offer-card.positive {
+            border-top: 5px solid var(--gold);
+        }
+        
+        .offer-card.negative {
+            border-top: 5px solid var(--deep-pink);
+        }
+        
+        .offer-card h3 {
+            margin-bottom: 20px;
+        }
+        
+        .offer-card ul {
+            list-style: none;
+            text-align: left;
+        }
+        
+        .offer-card ul li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .offer-card.positive ul li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+        
+        .offer-card.negative ul li:before {
+            content: '✗';
+            position: absolute;
+            left: 0;
+            color: var(--deep-pink);
+            font-weight: bold;
+        }
+        
+        /* Terms Section */
+        .terms-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .terms-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+        
+        .terms-card h3 {
+            margin-bottom: 20px;
+            color: var(--deep-pink);
+            display: flex;
+            align-items: center;
+        }
+        
+        .terms-card h3 i {
+            margin-right: 10px;
+            color: var(--gold);
+        }
+        
+        /* Apply Section */
+        .apply-section {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assist/img/wedd/wedd\ \(3\).jpg') no-repeat center center/cover;
+            color: var(--white);
+        }
+        
+        .apply-section h2 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        
+        .apply-section p {
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--gold);
+            transform: translateY(-3px);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-brown);
+            color: var(--white);
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: left 0.3s ease;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Kuti <span>Dazzles</span></a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#eligibility">Eligibility</a></li>
+                    <li><a href="#offer">Offer Details</a></li>
+                    <li><a href="#apply">Apply Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Spreading Holiday Love – Free Bridal Makeup Giveaway!</h1>
+            <p>One deserving January 2026 bride in Tamale will receive a full bridal makeup package at absolutely no cost.</p>
+            <a href="https://wa.me/233248451742?text=Hello%2C%20I%20am%20interested%20in%20the%20Free%20Bridal%20Makeup%20Giveaway." class="cta-button">Apply via WhatsApp</a>
+            <a href="#apply" class="cta-button secondary">Contact Us on Social Media</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section section-bg-light" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About the Giveaway</h2>
+            </div>
+            <div class="about-content">
+                <p>This holiday season, we're spreading love and support to a deserving bride in our community. We understand that planning a wedding can be financially challenging, and we want to help make your special day even more beautiful.</p>
+                <p>Only ONE bride will be selected for this special giveaway based on genuine financial need. Our team at Kuti Dazzles is committed to supporting our community and helping brides feel confident and radiant on their wedding day.</p>
+                <p>This is our heartfelt way of giving back and making a difference in someone's life during this festive season.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eligibility & Selection Section -->
+    <section class="section" id="eligibility">
+        <div class="container">
+            <div class="section-title">
+                <h2>Eligibility & Selection</h2>
+            </div>
+            <div class="eligibility-container">
+                <div class="eligibility-card">
+                    <h3><i class="fas fa-clipboard-check"></i> Eligibility Requirements</h3>
+                    <ul class="eligibility-list">
+                        <li>Must be a bride genuinely in financial need</li>
+                        <li>Wedding must fall between 1st – 31st January 2026</li>
+                        <li>Must be 18+ years old</li>
+                        <li>Open to Tamale residents only</li>
+                        <li>A short explanation or proof of need is required</li>
+                        <li>All shared information is confidential</li>
+                        <li>Booking period: 1st December – 31st December 2025</li>
+                        <li>Booking is only confirmed after receiving written confirmation from Kuti Dazzles</li>
+                    </ul>
+                </div>
+                <div class="eligibility-card">
+                    <h3><i class="fas fa-trophy"></i> Selection Process</h3>
+                    <ul class="eligibility-list">
+                        <li>Only one bride will be chosen for this special giveaway</li>
+                        <li>Selection is based solely on demonstrated financial need</li>
+                        <li>The final decision is made by the Kuti Dazzles Beauty Parlor team</li>
+                        <li>All applications are treated with respect and confidentiality</li>
+                        <li>The selected bride will be notified directly via phone or WhatsApp</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Details Section -->
+    <section class="section section-bg-pink" id="offer">
+        <div class="container">
+            <div class="section-title">
+                <h2>What's Included in the Offer</h2>
+            </div>
+            <div class="offer-container">
+                <div class="offer-card positive">
+                    <h3>What's Included</h3>
+                    <ul>
+                        <li>Professional bridal makeup on the wedding day</li>
+                        <li>A brief virtual or in-person consultation before the wedding</li>
+                        <li>Use of premium, skin-friendly makeup products</li>
+                        <li>Long-lasting makeup application techniques</li>
+                    </ul>
+                </div>
+                <div class="offer-card negative">
+                    <h3>What's Not Included</h3>
+                    <ul>
+                        <li>Hair styling and accessories</li>
+                        <li>Makeup for bridesmaids or family members</li>
+                        <li>Transportation to and from the venue</li>
+                        <li>Any additional beauty services</li>
+                    </ul>
+                    <p style="margin-top: 15px; font-style: italic;">Note: Additional services can be booked at our regular rates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Terms & Conditions</h2>
+            </div>
+            <div class="terms-container">
+                <div class="terms-card">
+                    <h3><i class="fas fa-camera"></i> Photos & Consent</h3>
+                    <p>With the bride's permission, we may take before-and-after photos and short video clips. These will be used strictly for promotional purposes for Kuti Dazzles Beauty Parlor and will always respect the bride's privacy and dignity.</p>
+                </div>
+                <div class="terms-card">
+                    <h3><i class="fas fa-calendar-times"></i> Cancellation Terms</h3>
+                    <p>If the bride cancels or changes the wedding date and we are unavailable for the new date, the offer becomes void. Kuti Dazzles may withdraw or reschedule in case of emergencies, with as much notice as possible provided.</p>
+                </div>
+                <div class="terms-card">
+                    <h3><i class="fas fa-exchange-alt"></i> Non-Transferability</h3>
+                    <p>This offer cannot be transferred, sold, or exchanged for cash. It applies only to the selected bride and cannot be used by anyone else.</p>
+                </div>
+                <div class="terms-card">
+                    <h3><i class="fas fa-file-signature"></i> Acceptance of Terms</h3>
+                    <p>By applying for or accepting this giveaway service, you agree to all Terms & Conditions listed on this page.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apply Section -->
+    <section class="apply-section" id="apply">
+        <div class="container">
+            <h2>Ready to Apply?</h2>
+            <p>Don't miss this opportunity to have your bridal makeup professionally done at no cost. Apply now through WhatsApp or reach out to us on social media with any questions.</p>
+            <a href="https://wa.me/233248451742?text=Hello%2C%20I%20am%20interested%20in%20the%20Free%20Bridal%20Makeup%20Giveaway." class="cta-button">Apply via WhatsApp</a>
+            
+            <div style="margin-top: 40px;">
+                <h3>Reach Us On Social Media</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Kuti Dazzles</h3>
+                    <p>Tamale's premier beauty parlour and cosmetology school specializing in bridal makeup, gele tying, and professional beauty services.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Kukuo Market, Opposite Tamale Teaching Hospital, Tamale</li>
+                        <li><i class="fas fa-phone-alt"></i> 0248451742 / 0594505063</li>
+                        <li><i class="fas fa-envelope"></i> info@kutidazzles.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9AM-6PM</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Giveaway</a></li>
+                        <li><a href="#eligibility">Eligibility</a></li>
+                        <li><a href="#offer">Offer Details</a></li>
+                        <li><a href="#apply">Apply Now</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Kuti Dazzles Beauty Parlour & School of Cosmetology. All Rights Reserved.</p>
+                <p><a href="#" style="color: var(--gold);">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Sticky header on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+    </script>
+</body>
+</html>
